@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/headerTvId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="16dp"
+        android:text="Add Note"
+        android:textColor="#6750A3"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/titleTxtInId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Title"
+        app:layout_constraintEnd_toEndOf="@+id/headerTvId"
+        app:layout_constraintStart_toStartOf="@id/headerTvId"
+        app:layout_constraintTop_toBottomOf="@id/headerTvId">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/titleEtvId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/decTxtInId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Description"
+        app:layout_constraintEnd_toEndOf="@+id/titleTxtInId"
+        app:layout_constraintStart_toStartOf="@id/titleTxtInId"
+        app:layout_constraintTop_toBottomOf="@id/titleTxtInId">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/decEtvId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:minHeight="200dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/subBtnId"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="64dp"
+        android:text="Submit"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/decTxtInId"
+        app:layout_constraintStart_toStartOf="@+id/decTxtInId"
+        app:layout_constraintTop_toBottomOf="@id/decTxtInId" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
